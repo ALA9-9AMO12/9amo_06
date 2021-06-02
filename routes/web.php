@@ -34,4 +34,4 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
     Route::resource('news', 'newsController');
     Route::resource('posts', 'postsController');
     Route::resource('pages', 'pageController');
-})
+});
