@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\courses;
+use App\news;
+use App\posts;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $news = news::orderBy('newsid', 'DESC')->limit('5')->get();
+        $posts = posts::orderBy('postid', 'DESC')->limit('5')->get();
+        $courses = courses::orderBy('courseid', 'DESC')->limit('3')->get();
+        return view('admin.index', compact('news', 'posts', 'courses'));
     }
 }
