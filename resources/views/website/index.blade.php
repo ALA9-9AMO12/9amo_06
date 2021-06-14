@@ -30,13 +30,13 @@
                         Posted by
                         <a href="#!">{{$post->user->name}}</a>
                         on {{date('M d, Y', strtotime($post->created_at))}}
-                        @if(count($post->categories) > 0)
-                        <span class="post-category">
-                            @foreach($post->categories as $category)
-                            Category : <a href="{{url('category/' . $category->slug)}}">{{$category->name}}</a>
-                            @endforeach
-                        </span>
-                        @endif
+{{--                        @if(count($post->categories) > 0)--}}
+{{--                        <span class="post-category">--}}
+{{--                            @foreach($post->categories as $category)--}}
+{{--                            Category : <a href="{{url('category/' . $category->slug)}}">{{$category->name}}</a>--}}
+{{--                            @endforeach--}}
+{{--                        </span>--}}
+{{--                        @endif--}}
                     </p>
                 </div>
                 <!-- Divider-->
@@ -46,16 +46,16 @@
                 <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
             </div>
 
-            <div class="col-lg-4 col-md-4">
-                <div class="category">
-                    <h2 class="category-title">Category</h2>
-                    <ul class="category-list">
-                        @foreach($categories as $category)
-                        <li><a href="{{url('category/' . $category->slug)}}">{{$category->name}}</a></li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
+{{--            <div class="col-lg-4 col-md-4">--}}
+{{--                <div class="category">--}}
+{{--                    <h2 class="category-title">Category</h2>--}}
+{{--                    <ul class="category-list">--}}
+{{--                        @foreach($categories as $category)--}}
+{{--                        <li><a href="{{url('category/' . $category->slug)}}">{{$category->name}}</a></li>--}}
+{{--                        @endforeach--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 

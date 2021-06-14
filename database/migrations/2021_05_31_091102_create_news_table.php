@@ -14,8 +14,9 @@ class CreateNewsTable extends Migration
     public function up()
     {
         Schema::create('news', function (Blueprint $table) {
-            $table->id('newsid');
-            $table->id('userid');
+            $table->id('newsid')->autoIncrement();
+            $table->foreignId('courseid')->references('courseid')->on('courses');
+            $table->foreignId('userid')->references('userid')->on('users');
             $table->string('title');
             $table->string('content');
             $table->timestamp('date');
