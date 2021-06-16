@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id('postid')->autoIncrement();
-            $table->foreignId('userid')->references('userid')->on('users');
+            $table->foreignId('userid')->references('id')->on('users');
             $table->string('title');
             $table->string('content');
             $table->timestamp('date');

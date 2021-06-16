@@ -32,6 +32,66 @@
                         </table>
                     </div>
                 </div>
+
+                <div class="card mt-4">
+                    <div class="card-header">Latest Post</div>
+
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td scope="col" width="60">#</td>
+                                <td scope="col" width="60">Title</td>
+                                <td scope="col" width="200">Created By</td>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            @foreach($posts as $p)
+
+                                <tr>
+                                    <th>{{ $p->postid }}</th>
+                                    <th>{{ $p->title }}</th>
+                                    <th>{{ $p->user->name }}</th>
+                                    <th>{{ $p->content }}</th>
+                                    <th>{{ $p->date }}</th>
+                                </tr>
+
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header">Latest Courses</div>
+
+                    <div class="card-body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td scope="col" width="60">#</td>
+                                <td scope="col" width="60">Title</td>
+                                <td scope="col" width="200">Created By</td>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            @foreach($courses as $c)
+
+                                <tr>
+                                    <th>{{ $c->courseid }}</th>
+                                    <th>{{ $c->title }}</th>
+                                    <th>{{ $c->user->name }}</th>
+                                    <th>{{ $c->content }}</th>
+                                    <th>{{ $c->date }}</th>
+                                </tr>
+
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

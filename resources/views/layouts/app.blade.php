@@ -58,7 +58,7 @@
                                 <a class="nav-link" href="{{ route('courses.index') }}">{{ __('Courses') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('post.index') }}">{{ __('Posts') }}</a>
+                                <a class="nav-link" href="{{ route('posts.index') }}">{{ __('Posts') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('pages.index') }}">{{ __('Pages') }}</a>

@@ -15,7 +15,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id('courseid')->autoIncrement();
-            $table->foreignId('userid')->references('userid')->on('users');
+            $table->foreignId('userid')->references('id')->on('users');
             $table->string('title');
             $table->timestamp('date');
             $table->string('content');
