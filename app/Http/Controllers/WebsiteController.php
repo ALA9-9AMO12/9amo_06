@@ -13,4 +13,8 @@ class WebsiteController extends Controller
         $posts = posts::orderBy('date', 'DESC')->paginate(5);
         return view('website.index', compact('posts', 'courses'));
     }
+
+    public function showContactForm() {
+        return view('website.contact');
+    }
 }
